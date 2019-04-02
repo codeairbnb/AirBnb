@@ -1,0 +1,50 @@
+
+   <% include nav.ejs %> 
+ 
+   <!--Section Carousel -->
+    <%include carousel.ejs %>
+  
+
+<!--section explore airbnb-->
+<%include explore.ejs %>
+
+<!--album Section-->
+<div class="parallax-container">
+  <div class="parallax">
+    <img src="/materialize/img/airbnb_pixabay.jpg" class="responsive-img">
+  </div>
+</div>
+
+<!--end section-->
+
+<!--Gallary-->
+
+<% include gallary.ejs %>
+  <!--album Section-->
+<div class="parallax-container">
+    <div class="parallax">
+      <img src="/materialize/img/out.jpg" class="responsive-img">
+    </div>
+  </div> 
+  <!--end section-->
+        <script src="/materialize/js/jquery.js"></script>
+      <script src="/materialize/js/materialize.min.js"></script>
+  <!--footer section-->
+   <%include footer.ejs %>
+   <script>
+          $(document).ready(function(){
+            $('.sidenav').sidenav();
+            $('.materialboxed').materialbox();
+            $('.slider').slider()
+            $('.parallax').parallax();
+            $('.modal').modal(); 
+            });
+            const slider = document.querySelector('.slider');
+            M.Slider.init(slider,{
+              indicators:false,
+            
+            });
+        </script>
+
+  </body>
+</html>

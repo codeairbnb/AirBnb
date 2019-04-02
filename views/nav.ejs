@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/materialize/css/materialize.min.css">
+    <title>AirBnB</title>
+  </head>
+  <body class ="scrollspy grey lighten-3">
+<header>
+      <div class="navbar-fixed">
+        <nav class="nav-wrapper black darken-5">
+            <div class="container">
+              <a href="#" class="brand-logo red-text darken-5">AirBnB</a>
+              <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+                <i class ="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                  <li><a href="#"><i class=" material-icons">home</i></a></li>
+                  <li><a href="#">Book Today</a></li>
+                  <li><a href="#signup" class="modal-trigger">Singup</a></li>
+                  <!--signup modal-->
+                  <%include signup.ejs%>
+                  <li><a href="#login" class="modal-trigger ">Sign in</a></li>
+                  <!--login-->
+                  <% include login.ejs %>
+                  <!--end login-->
+                  <!--signup-->
+               </div>
+                  
+                </ul>
+            </div>
+          </nav>
+        </div>
+          <ul id="mobile-nav" class="sidenav grey">
+              <div class="container">
+                <h5 class="center red-text darken-5 ">Menu</h5>
+              </div>
+              
+           <li><a href="#">Home</a></li>
+           <li><a href="#">Book today</a></li>
+           <li><a href="#signup" class="modal-trigger">Sing Up</a></li>
+           <!--signup modal-->
+           <%include signup.ejs%>
+           <li><a href="#login" class="modal-trigger ">Sign In</a></li>
+                  <!--login-->
+                  <% include login.ejs %>
+                  <!--end login-->
+       </ul>
+      </header>
