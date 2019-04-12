@@ -7,7 +7,8 @@ router.get('/login', (req,res) =>{
 
 // outh logout
 router.get('/logout', (req, res) => {
-    res.send('logout with oauth');
+    req.logout();
+    res.redirect('/');
 });
 
 // google login
@@ -15,14 +16,9 @@ router.get('/google', passport.authenticate('google',{
     scope:['profile']
 }));
 
-router.get('/facebook', (req,res) =>{
-    //handle with passport
-    res.send('login with facebook');
+router.get('/google/redirect', passport.authenticate('google'),(req,res) => {
+    res.redirect('/profile/') ;
 });
-
-router.get('/google/redirect', (req,res)=>{
-    res.send('you reach url')
-})
 
 module.exports = router;
 
