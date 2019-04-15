@@ -1,5 +1,6 @@
 const express = require('express');
 const passportSetup = require('./config/passport-setup');
+const expressValidator = require('express-validator');
 const RouterOuth = require('./auther/outher-router');
 const profileOuth = require('./auther/profile-router');
 const registerOuther = require('./auther/register-router');
