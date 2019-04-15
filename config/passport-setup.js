@@ -1,6 +1,6 @@
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20');
-<<<<<<< HEAD
+
 const User = require('../models/google-model');
 const keys = require('./keys');
 
@@ -15,11 +15,9 @@ passport.deserializeUser((id,done)=>{
     })
 
 })
-=======
-const User = require('../models/user-model');
-const keys = require('./keys');
 
->>>>>>> fccd69b3b00dea74c13e9ddf5990d8ddaf92ec1d
+const user = require('../models/user-model');
+
 
 // use google stratgy
 passport.use(
@@ -29,7 +27,6 @@ passport.use(
     clientID: keys.google.clientID,
     clientSecret:keys.google.clientSecret
 },(accessToken, refreshToken, profile, done) => {
-<<<<<<< HEAD
   User.findOne({googleId:profile.id}).then((currentUser) =>{
       if(currentUser){
           console.log('User is :',  currentUser)
@@ -45,7 +42,6 @@ passport.use(
         }
   });
   
-=======
     // callback function
     console.log('callback fun');
     //  console.log(profile);
@@ -58,6 +54,5 @@ passport.use(
     }).catch((err) => {
         console.log(err);
     })
->>>>>>> fccd69b3b00dea74c13e9ddf5990d8ddaf92ec1d
 })
 )
