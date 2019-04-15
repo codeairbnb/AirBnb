@@ -2,7 +2,8 @@ const express = require('express');
 const passportSetup = require('./config/passport-setup');
 const RouterOuth = require('./auther/outher-router');
 const profileOuth = require('./auther/profile-router');
-
+const registerOuther = require('./auther/register-router');
+const bodyParser = require('body-parser');
 const db = require('./test/connection');
 const keys = require('./config/keys')
 const app = express();
@@ -26,6 +27,8 @@ app.set('view engine', 'ejs');
 //use authRouter
 app.use('/auth', RouterOuth);
 app.use('/profile', profileOuth);
+app.use('/user', registerOuther);
+
 
 
 //cookies session 
