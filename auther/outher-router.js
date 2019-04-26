@@ -5,9 +5,13 @@ router.get('/login', (req,res) =>{
     res.render('login');
 });
 
+router.get('/landlord', (req,res) =>{
+    res.render('landlord');
+});
+
 router.get('/signup', (req, res) =>{
     res.render('signup');
-})
+});
 
 // outh logout
 router.get('/logout', (req, res) => {
@@ -22,6 +26,10 @@ router.get('/google', passport.authenticate('google',{
 
 router.get('/google/redirect', passport.authenticate('google'),(req,res) => {
     res.redirect('/profile/') ;
+});
+
+router.get('/landlordProfile', (req, res) =>{
+    res.render('landlordProfile');
 });
 
 module.exports = router;

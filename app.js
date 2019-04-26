@@ -40,5 +40,13 @@ app.get('/', function(req, res){
   res.render('index');
 });
 
+app.get('/landlord', function(req, res){
+  res.render('landlord');
+});
+
+app.get('/landlordProfile', function(req, res){
+  res.render('landlordProfile');
+});
+
 app.listen(3000);
 console.log('i am in port 3000');

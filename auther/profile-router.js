@@ -16,4 +16,8 @@ router.get('/', authCheck, (req,res) => {
 router.get('/profile', (req,res) =>{
     res.render('profile');
 });
+
+router.get('/landlord', (req,res) =>{
+    res.render('landlord');
+});
 module.exports = router;
