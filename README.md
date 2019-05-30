@@ -12,3 +12,5 @@ Express for our back-end framework, Angular.js for our front-end framework and N
 - "nodemon", starts the server and connects to the database. 
 > Go to browser and type in "localhost:3000" after that the application itself should be running and you'll enjoy all the functioinality
 that we've implemented.
+# Challenges
+> 😔We have struggled to be able to fetch and display the property images that are uploaded into database, however we are still making our research and trying out possible alternatives to achieve this goal, this is because we fully understand that it very easy to "buy what you see".
